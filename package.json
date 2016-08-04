@@ -1,25 +1,13 @@
 {
-  "name": "react-toolbox",
-  "description": "A set of React components implementing Google's Material Design specification with the power of CSS Modules.",
-  "homepage": "http://www.react-toolbox.com",
-  "version": "1.0.2",
+  "name": "energie-ui",
+  "description": "A set of React components for energie ui",
+  "version": "1.0.0",
   "main": "./lib",
   "author": {
-    "name": "React Toolbox Team",
-    "url": "http://github.com/react-toolbox"
+    "name": "Russell Wong",
+    "url": "http://github.com/russellwmy/energie-ui"
   },
-  "contributors": [
-    {
-      "name": "Javi Jimenez Villar",
-      "email": "javi.jimenez.villar@gmail.com",
-      "url": "http://soyjavi.com/"
-    },
-    {
-      "name": "Javi Velasco Arjona",
-      "email": "javier.velasco86@gmail.com",
-      "url": "http://javivelasco.com/"
-    }
-  ],
+
   "repository": {
     "type": "git",
     "url": "git+https://github.com/react-toolbox/react-toolbox.git"
