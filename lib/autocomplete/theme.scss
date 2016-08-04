@@ -38,8 +38,9 @@
 .suggestions {
   @include no-webkit-scrollbar;
   position: absolute;
+  left: $input-padding;
   z-index: $z-index-high;
-  width: 100%;
+  width: calc(100% - 2 * #{$input-padding});
   max-height: 0;
   overflow-x: hidden;
   overflow-y: auto;
@@ -77,7 +78,6 @@
     height: 0;
     pointer-events: none;
     content: "";
-    border-top: $size solid $input-text-bottom-border-color;
     border-right: $border;
     border-left: $border;
     transition: transform $animation-duration $animation-curve-default;

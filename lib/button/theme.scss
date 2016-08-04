@@ -45,6 +45,7 @@
     pointer-events: none;
   }
   > .rippleWrapper {
+    border-radius: $button-border-radius;
     overflow: hidden;
   }
   &[disabled] {
@@ -85,7 +86,7 @@
   @extend %button;
   @extend %squared;
   @extend %solid;
-  @include shadow-2dp();
+  // @include shadow-2dp();
 }
 
 .flat {
