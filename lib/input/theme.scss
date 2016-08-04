@@ -5,7 +5,7 @@
 
 .input {
   position: relative;
-  padding: $input-padding 0;
+  padding: $input-padding 0 0 0;
   &.withIcon {
     margin-left: $input-icon-size;
   }
@@ -85,6 +85,7 @@
   position: absolute;
   top: $input-padding + (1.5 * $input-field-padding);
   left: 0;
+  right: $input-text-border-radius;
   font-size: $input-field-font-size;
   line-height: $input-field-font-size;
   color: $input-text-label-color;
@@ -126,7 +127,9 @@
 
 .counter {
   position: absolute;
-  right: 0;
+  top:  $input-focus-label-top - 0.1*$unit;
+  // right: 0;
+  right: $input-text-border-radius;
   color: $input-text-label-color;
 }
 
