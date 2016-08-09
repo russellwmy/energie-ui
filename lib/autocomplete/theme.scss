@@ -50,7 +50,7 @@
   transition-duration: $animation-duration;
   transition-property: max-height, box-shadow;
   &:not(.up) {
-    margin-top: - $input-padding;
+    margin-top:0;
   }
   &.up {
     bottom: 0;
