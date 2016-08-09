@@ -32,7 +32,7 @@ class DialogTest extends React.Component {
             onOverlayClick={this.handleToggle}
             onEscKeyDown={this.handleToggle}
           >
-            <p>Let Google help apps <strong>determine location</strong>. This means sending anonymous location data to Google, even when no apps are running.</p>
+            <p>This means sending anonymous location data to Google, even when no apps are running. This means sending anonymous location data to Google, even when no apps are running. This means sending anonymous location data to Google, even when no apps are running. This means sending anonymous location data to Google, even when no apps are running. This means sending anonymous location data to Google, even when no apps are running. This means sending anonymous location data to Google, even when no apps are running. This means sending anonymous location data to Google, even when no apps are running. This means sending anonymous location data to Google, even when no apps are running. This means sending anonymous location data to Google, even when no apps are running. Let Google help apps <strong>determine location</strong>. This means sending anonymous location data to Google, even when no apps are running.</p>
             <DialogChild />
           </Dialog>
         </ContextComponent>

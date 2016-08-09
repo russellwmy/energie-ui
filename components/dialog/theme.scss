@@ -59,6 +59,7 @@
   padding: $dialog-content-padding;
   overflow-y: auto;
   color: $color-text-secondary;
+  -webkit-overflow-scrolling: touch;
 }
 
 .navigation {
