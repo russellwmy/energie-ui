@@ -60,6 +60,7 @@
   overflow-y: auto;
   color: $color-text-secondary;
   -webkit-overflow-scrolling: touch;
+  max-height: 96vh;
 }
 
 .navigation {
