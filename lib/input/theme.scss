@@ -37,7 +37,6 @@
   outline: none;
   &:focus:not([disabled]):not([readonly]) {
     border-color: $color-primary;
-
     ~ .bar:before, ~ .bar:after {
       width: 50%;
     }
