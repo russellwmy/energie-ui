@@ -35,7 +35,7 @@
   border: $input-text-border-size solid $input-text-border-color;
   border-radius: $input-text-border-radius;
   outline: none;
-  &:focus {
+  &:focus:not([disabled]):not([readonly]) {
     border-color: $color-primary;
     ~ .bar:before, ~ .bar:after {
       width: 50%;
@@ -53,7 +53,7 @@
       color: $input-text-highlight-color;
     }
   }
-  &:focus, &.filled, &[type="date"], &[type="time"] {
+  &:focus:not([disabled]):not([readonly]), &.filled, &[type="date"], &[type="time"] {
     ~ .label:not(.fixed) {
       top: $input-focus-label-top;
       font-size: $input-label-font-size;
