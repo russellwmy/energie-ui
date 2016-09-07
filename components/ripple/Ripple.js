@@ -1,7 +1,7 @@
 import React, { Component, PropTypes } from 'react';
 import ReactDOM from 'react-dom';
 import classnames from 'classnames';
-import update from 'react-addons-update';
+import update from 'immutability-helper';
 import { themr } from 'react-css-themr';
 import { RIPPLE } from '../identifiers.js';
 import events from '../utils/events';
@@ -240,21 +240,17 @@ const rippleFactory = (options = {}) => {
       }
 
       render () {
-        if (!this.props.ripple) {
-          return <ComposedComponent {...this.props} />;
-        } else {
-          const { ripples } = this.state;
-          const {
-            ripple, onRippleEnded, rippleCentered, rippleMultiple, rippleSpread, //eslint-disable-line no-unused-vars
-            children, rippleClassName: className, ...other
-          } = this.props;
-          return (
-            <ComposedComponent {...other} onMouseDown={this.handleMouseDown} onTouchStart={this.handleTouchStart}>
-              {children ? children : null}
-              {Object.keys(ripples).map(key => this.renderRipple(key, className, ripples[key]))}
-            </ComposedComponent>
-          );
-        }
+        const { ripples } = this.state;
+        const { onRippleEnded, rippleCentered, rippleMultiple, rippleSpread, // eslint-disable-line
+          children, ripple, rippleClassName, ...other } = this.props;
+
+        if (!ripple) return <ComposedComponent children={children} {...other} />;
+        return (
+          <ComposedComponent {...other} onMouseDown={this.handleMouseDown} onTouchStart={this.handleTouchStart}>
+            {children}
+            {Object.keys(ripples).map(key => this.renderRipple(key, rippleClassName, ripples[key]))}
+          </ComposedComponent>
+        );
       }
     }
 
